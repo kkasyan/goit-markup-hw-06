@@ -431,13 +431,8 @@
       </div>
     </footer>
     <!-- Модальное окно -->
-    <!-- <div class="backdrop is-hidden" data-modal> -->
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="close-modal-btn" data-modal-close>
-          <svg class="close-btn" width="11" height="11">
-            <use href="./images/symbol-defs.svg#icon-close"></use>
-          </svg>
-        </button>
         <form name="form" autocomplete="on">
           <div
             role="group"
@@ -452,9 +447,16 @@
             <strong id="contact-details-head" class="contact-details-head">
               Оставьте свои данные, мы вам перезвоним
             </strong>
-            <label class="contact-details-field">
+<div class="test">
+          <label for="name" class="label-text">Имя</label>
+          <svg class="form-icon-test" width="18" height="18">
+            <use href="./images/symbol-defs.svg#icon-person-black"></use>
+          </svg>
+          <input type="name" name="name" class="field-input" id="name" required />
+        </div>  
+          <label class="contact-details-field">
               <span class="label-text">Имя</span>
-              <input type="name" name="name" class="field-input" required />
+   <input type="name" name="name" class="field-input" id="name" required /> 
               <svg class="form-icon" width="18" height="18">
                 <use href="./images/symbol-defs.svg#icon-person-black"></use>
               </svg>
@@ -480,6 +482,7 @@
                 rows=""
                 placeholder="Введите текст"
                 resize
+                class="area"
               ></textarea>
             </label>
             <label class="checkbox-label">
