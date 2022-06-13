@@ -377,7 +377,7 @@
             </a>
           </address>
         </div>
-        <div class="column">
+        <div class="column join-column">
           <p class="join-us-head"><strong>Присоединяйтесь</strong></p>
           <ul class="social-list">
             <li class="footer-list-item">
@@ -410,44 +410,87 @@
             </li>
           </ul>
         </div>
+        <form name="form" class="footer-form" autocomplete="on">
+          <p class="join-us-head"><strong>Подпишитесь на рассылку</strong></p>
+          <div class="footer-subscribe-thumb">
+            <label>
+              <input
+                type="email"
+                class="subscribe-field"
+                placeholder="E-mail"
+              />
+            </label>
+            <button type="submit" class="footer-submit-btn">
+              Подписаться
+              <svg class="submit-icon" width="24" height="24">
+                <use href="./images/symbol-defs.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
     <!-- Модальное окно -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <form name="">
-          <div role="group" aria-labelledby="">
-            <strong id="">Оставьте свои данные, мы вам перезвоним</strong>
-            <label>
-              Имя
-              <input type="name" name="name" />
+        <form name="form" autocomplete="on">
+          <div
+            role="group"
+            aria-labelledby="contact-details-head"
+            class="form-group"
+          >
+            <strong id="contact-details-head" class="contact-details-head">
+              Оставьте свои данные, мы вам перезвоним
+            </strong>
+            <div class="fields-container">
+            <label class="contact-details-field">
+              <span class="label-text">Имя</span>
+              <input type="name" name="name" class="field-input" required />
+              <svg class="form-icon" width="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-person-black"></use>
+              </svg>
             </label>
-            <label>
-              Телефон
-              <input type="tel" name="phone" />
+
+            <label class="contact-details-field">
+              <span class="label-text">Телефон</span>
+              <input type="tel" name="tel" class="field-input" required />
+              <svg class="form-icon" width="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-phone-black"></use>
+              </svg>
             </label>
-            <label>
-              Почта
-              <input type="email" name="email" />
+            <label class="contact-details-field">
+              <span class="label-text">Почта</span>
+              <input type="email" name="email" class="field-input" required />
+              <svg class="form-icon" width="18" height="18">
+                <use href="./images/symbol-defs.svg#icon-email-black"></use>
+              </svg>
             </label>
-            <label>
-              Комментарий
+            <label class="textarea">
+              <span class="label-text">Комментарий</span>
               <textarea
                 name="comment"
                 rows=""
                 placeholder="Введите текст"
+                resize
               ></textarea>
             </label>
-            <label>
-              <input type="checkbox" name="agree" value="agree" />
-              Соглашаюсь с рассылкой и принимаю
-              <a href="" class="agreement">Условия договора</a>
+            <label class="checkbox-label">
+              <input
+                type="checkbox"
+                name="agree"
+                value="agree"
+                class="checkbox"
+                required
+                
+              />
+              <p class="agreement">Соглашаюсь с рассылкой и принимаю
+              <a href="" class="agreement-link">Условия договора</a></p>
             </label>
             <button type="submit" class="submit-btn">Отправить</button>
           </div>
         </form>
         <button type="button" class="close-modal-btn" data-modal-close>
-          <svg class="close-btn" width="18" height="18">
+          <svg class="close-btn" width="11" height="11">
             <use href="./images/symbol-defs.svg#icon-close"></use>
           </svg>
         </button>
